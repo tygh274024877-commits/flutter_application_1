@@ -1,0 +1,15 @@
+const List<String> syrianCities = [
+  "Damascus",
+  "Aleppo",
+  "Lattakia",
+  "Homs",
+  "Hama",
+  "Tartus",
+  "Idlib",
+  "Deir ez-Zor",
+  "Al-Hasakah",
+  "Daraa",
+  "As-Suwayda",
+  "Quneitra",
+  "Rif Dimashq",
+];
