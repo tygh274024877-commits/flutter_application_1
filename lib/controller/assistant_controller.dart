@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
 
-class AssistantController extends GetxController {
+class AiAssistantController extends GetxController {
+  void openGeminiChat() {
+    Get.toNamed("/gemini_chat");
+  }
 
-  var status = "أنا مساعدك الذكي، كيف يمكنني مساعدتك؟".obs;
-
-  void askAI() {
-    status.value = "جاري التفكير في إجابة...";
+  void openTranslator() {
+    Get.toNamed("/translator_ai");
   }
 }

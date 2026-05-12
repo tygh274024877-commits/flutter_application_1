@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/screens/AiTranslatorScreen.dart';
 import 'package:flutter_application_1/view/screens/account_security_view.dart';
 import 'package:flutter_application_1/view/screens/bottom_screen.dart';
 import 'package:flutter_application_1/view/screens/login_screen.dart';
@@ -53,6 +54,8 @@ class MyApp extends StatelessWidget {
           name: "/serviceitemsscreen",
           page: () => const ServiceItemsScreen(),
         ),
+        GetPage(name: "/translator_ai", page: () => AiTranslatorScreen()),
+        //GetPage(name: "/gemini_chat", page: () => const GeminiChatScreen()),
       ],
     );
   }

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/navigation_controllers.dart';
+import 'package:flutter_application_1/view/screens/assistant_screen.dart';
 import 'package:flutter_application_1/view/screens/main_wapper.dart';
 import 'package:get/get.dart';
 
-import '../../core/color/constants.dart';
+import '../../core/color/constants.dart' hide AppColors;
 import '../../core/theme/app_shadows.dart';
 import 'profile_screen.dart';
 
@@ -17,20 +18,22 @@ class MainScreen extends StatelessWidget {
     return GetBuilder<NavigationController>(
       builder: (controller) {
         return Directionality(
-          // الحفاظ على الاتجاه من اليسار دائماً كما طلبتِ
           textDirection: TextDirection.ltr,
           child: Scaffold(
             backgroundColor: AppColors.background,
             body: IndexedStack(
               index: controller.currentIndex,
               children: [
+                /// Home
                 const MainWrapper(),
-                Center(
-                  child: Text("ai_screen".tr), // ترجمة النص
-                ),
-                Center(
-                  child: Text("favorites".tr), // ترجمة النص
-                ),
+
+                /// AI Assistant Screen
+                const AiAssistantHomeScreen(),
+
+                /// Favorites
+                Center(child: Text("favorites".tr)),
+
+                /// Profile
                 const ProfileScreen(),
               ],
             ),
@@ -45,7 +48,7 @@ class MainScreen extends StatelessWidget {
     const Color brandOrange = Color(0xFFD2775B);
 
     return Container(
-      height: 75,
+      height: 80,
       decoration: BoxDecoration(
         color: AppColors.background,
         borderRadius: const BorderRadius.only(
@@ -98,20 +101,35 @@ class MainScreen extends StatelessWidget {
     Color activeColor,
   ) {
     bool isActive = controller.currentIndex == index;
+
     return GestureDetector(
       onTap: () => controller.changePage(index),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(
-            icon,
-            size: isActive ? 30 : 28,
-            color: isActive ? activeColor : Colors.grey,
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 250),
+            padding: EdgeInsets.all(isActive ? 8 : 0),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: isActive
+                  ? activeColor.withOpacity(0.15)
+                  : Colors.transparent,
+            ),
+            child: Icon(
+              icon,
+              size: isActive ? 28 : 26,
+              color: isActive ? activeColor : Colors.grey,
+            ),
           ),
+
+          const SizedBox(height: 2),
           Text(
             label,
+            textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 12,
+              fontSize: 10,
+              fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
               color: isActive ? activeColor : Colors.grey,
             ),
           ),
