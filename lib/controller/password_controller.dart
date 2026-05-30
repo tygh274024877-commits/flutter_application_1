@@ -26,7 +26,6 @@ class PasswordController extends GetxController {
 
   void resetPassword() {
     if (passwordFormKey.currentState!.validate()) {
-      
       if (newPasswordController.text != confirmPasswordController.text) {
         Get.snackbar(
           "error".tr,
@@ -39,8 +38,7 @@ class PasswordController extends GetxController {
         );
         return;
       }
-
-      Get.offAllNamed('/home');
+      Get.offAllNamed('/bottom');
     }
   }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/color/constants.dart';
 import 'package:flutter_application_1/core/theme/app_shadows.dart';
-import 'package:flutter_application_1/models/tripservices.dart';
+import 'package:flutter_application_1/models/tripservices_Traslition.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 

@@ -19,7 +19,8 @@ class AiTranslatorController extends GetxController {
   final FlutterTts flutterTts = FlutterTts();
   final ImagePicker _picker = ImagePicker();
 
-  final sourceText = "".obs, translatedText = "الترجمة ستظهر هنا...".obs;
+  final sourceText = "".obs;
+  final translatedText = "translation_placeholder".tr.obs;
   final isLoading = false.obs, isListening = false.obs, isMuted = false.obs;
   final sourceLang = "English".obs, targetLang = "Arabic".obs;
 
@@ -40,7 +41,7 @@ class AiTranslatorController extends GetxController {
       history.assignAll(await _historyService.loadHistory());
 
   void addToHistory(String src, String tgt) async {
-    if (src.isEmpty || tgt == "الترجمة ستظهر هنا...") return;
+    if (src.isEmpty || tgt == "translation_placeholder".tr) return;
     history.insert(0, {
       'source': src,
       'target': tgt,
@@ -72,7 +73,7 @@ class AiTranslatorController extends GetxController {
       translatedText.value = res.text;
       addToHistory(sourceText.value, translatedText.value);
     } catch (_) {
-      translatedText.value = "مشكلة في الاتصال";
+      translatedText.value = "connection_error_msg".tr;
     } finally {
       isLoading.value = false;
     }
@@ -80,7 +81,7 @@ class AiTranslatorController extends GetxController {
 
   void speakResult() async {
     if (translatedText.value.isEmpty ||
-        translatedText.value == "الترجمة ستظهر هنا...")
+        translatedText.value == "translation_placeholder".tr)
       return;
     await flutterTts.setLanguage(
       targetLang.value == "Arabic" ? "ar-SA" : "en-US",
@@ -104,7 +105,7 @@ class AiTranslatorController extends GetxController {
           if (val.finalResult) {
             isListening.value = false;
             if (sourceText.value.trim().isEmpty) {
-              _showWarning("لم يتم التعرف على كلمات واضحة");
+              _showWarning("speech_empty_warning".tr);
             } else {
               await translate();
               if (!isMuted.value) speakResult();
@@ -135,14 +136,14 @@ class AiTranslatorController extends GetxController {
 
       // التحقق إذا كان النص موجوداً وصورته واضحة
       if (recognizedText.blocks.isEmpty) {
-        _showWarning("الصورة غير واضحة أو لا تحتوي على نص");
+        _showWarning("ocr_empty_warning".tr);
       } else {
         recognizedBlocks.assignAll(recognizedText.blocks);
         Get.to(() => const InteractiveOcrScreen());
       }
       await recognizer.close();
     } catch (e) {
-      _showWarning("فشل في معالجة الصورة");
+      _showWarning("ocr_failed_error".tr);
     } finally {
       isLoading.value = false;
     }
@@ -151,7 +152,7 @@ class AiTranslatorController extends GetxController {
   // دالة مساعدة لعرض الإشعارات بستايلك الخاص
   void _showWarning(String message) {
     Get.snackbar(
-      "تنبيه",
+      "warning_title".tr,
       message,
       snackPosition: SnackPosition.BOTTOM,
       backgroundColor: AppColors.primary.withOpacity(0.9),
@@ -165,7 +166,7 @@ class AiTranslatorController extends GetxController {
     final temp = sourceLang.value;
     sourceLang.value = targetLang.value;
     targetLang.value = temp;
-    if (translatedText.value != "الترجمة ستظهر هنا...") {
+    if (translatedText.value != "translation_placeholder".tr) {
       final oldSrc = sourceText.value;
       sourceText.value = translatedText.value;
       translatedText.value = oldSrc;

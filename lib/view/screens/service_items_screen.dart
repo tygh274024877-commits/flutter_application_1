@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/controller/serviceitems_controller.dart';
-
 import 'package:flutter_application_1/core/color/constants.dart';
-import 'package:get/state_manager.dart';
+import 'package:get/get.dart'; // 👈 تعديل الـ import ليشمل كافة خصائص GetX ومنها .tr
 
 class ServiceItemsScreen extends GetView<ServiceitemController> {
   const ServiceItemsScreen({super.key});
@@ -15,7 +13,7 @@ class ServiceItemsScreen extends GetView<ServiceitemController> {
       body: Obx(
         () => GridView.builder(
           itemCount: controller.controller.currentItems.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 1,
             childAspectRatio: 0.8,
           ),
@@ -23,8 +21,8 @@ class ServiceItemsScreen extends GetView<ServiceitemController> {
             final item = controller.controller.currentItems[index];
             return Container(
               height: 200,
-              margin: EdgeInsets.symmetric(horizontal: 25),
-              padding: EdgeInsets.symmetric(vertical: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.symmetric(vertical: 20),
               child: Stack(
                 children: [
                   Image.asset(
@@ -36,28 +34,34 @@ class ServiceItemsScreen extends GetView<ServiceitemController> {
                     top: 5,
                     right: 5,
                     child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 4,
+                      ),
                       color: Colors.black54,
                       child: Text(
-                        item['locationName'],
-                        style: TextStyle(color: Colors.white, fontSize: 10),
+                        "${item['locationName']}".tr, // 👈 إضافة الترجمة
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                        ),
                       ),
                     ),
                   ),
 
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          item['name'],
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          "${item['name']}".tr, // 👈 إضافة الترجمة
+                          style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 4),
+                        const SizedBox(height: 4),
                         Text(
-                          item['description'],
-                          maxLines: 2, // 👈 عرض سطرين فقط لتوفير المساحة
+                          "${item['description']}".tr, // 👈 إضافة الترجمة
+                          maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 12,

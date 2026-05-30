@@ -5,7 +5,7 @@ import 'package:flutter_application_1/core/color/constants.dart';
 import 'package:flutter_application_1/models/detaileds_srvices.dart';
 import 'package:flutter_application_1/models/landMark_model.dart';
 import 'package:flutter_application_1/models/show_cites.dart';
-import 'package:flutter_application_1/models/tripservices.dart';
+import 'package:flutter_application_1/models/tripservices_Traslition.dart';
 import 'package:get/get.dart';
 
 class ServicesselectController extends GetxController {
@@ -53,7 +53,7 @@ class ServicesselectController extends GetxController {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                "Chosse a City",
+                "choose_city_title".tr,
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -63,8 +63,8 @@ class ServicesselectController extends GetxController {
               const Divider(color: AppColors.BurntBrown),
               ListTile(
                 leading: const Icon(Icons.map, color: AppColors.BurntBrown),
-                title: const Text(
-                  "All Cities",
+                title: Text(
+                  "all_cities_label".tr,
                   style: TextStyle(color: AppColors.BurntBrown),
                 ),
                 onTap: () {
@@ -79,7 +79,7 @@ class ServicesselectController extends GetxController {
                     color: AppColors.BurntBrown,
                   ),
                   title: Text(
-                    city,
+                    city.tr,
                     style: TextStyle(color: AppColors.BurntBrown),
                   ),
                   onTap: () {

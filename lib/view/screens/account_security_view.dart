@@ -47,7 +47,7 @@ class AccountSecurityView extends GetView<AccountSecurityController> {
               child: Column(
                 children: [
                   Text(
-                    "security_settings".tr, // ترجمة العنوان
+                    "security_settings".tr,
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -56,25 +56,25 @@ class AccountSecurityView extends GetView<AccountSecurityController> {
                   ),
                   const SizedBox(height: 30),
                   TextFieldLogin(
-                    label: "email_address".tr, // ترجمة
+                    label: "email_address".tr,
                     icon: Icons.email,
                     controller: controller.emailController,
                   ),
                   const SizedBox(height: 15),
                   TextFieldLogin(
-                    label: "old_password".tr, // ترجمة
+                    label: "old_password".tr,
                     icon: Icons.lock_outline,
                     controller: controller.oldPasswordController,
                   ),
                   const SizedBox(height: 15),
                   TextFieldLogin(
-                    label: "new_password".tr, // ترجمة
+                    label: "new_password".tr,
                     icon: Icons.vpn_key_rounded,
                     controller: controller.newPasswordController,
                   ),
                   const SizedBox(height: 15),
                   TextFieldLogin(
-                    label: "confirm_new_password".tr, // ترجمة
+                    label: "confirm_new_password".tr,
                     icon: Icons.check_circle_outline,
                     controller: controller.confirmPasswordController,
                   ),
@@ -82,10 +82,48 @@ class AccountSecurityView extends GetView<AccountSecurityController> {
                   SizedBox(
                     width: double.infinity,
                     child: ButtonLogin(
-                      text: "confirm_update".tr, // ترجمة الزر
+                      text: "confirm_update".tr,
                       onPressed: () => controller.updateSecurity(),
                     ),
                   ),
+
+                  // --- إضافة الروابط في الأسفل ---
+                  const SizedBox(height: 20),
+
+                  // 1. رابط هل نسيت كلمة السر؟
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: GestureDetector(
+                      onTap: () => Get.toNamed('/password'),
+                      child: Text(
+                        "did_you_forget_password".tr,
+                        style: const TextStyle(
+                          color: AppColors.golden,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 10),
+
+                  // 2. رابط إنشاء حساب جديد
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: GestureDetector(
+                      onTap: () => Get.toNamed('/signup'),
+                      child: Text(
+                        "create_new_account".tr,
+                        style: const TextStyle(
+                          color: AppColors.golden,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+
                   const SizedBox(height: 30),
                 ],
               ),

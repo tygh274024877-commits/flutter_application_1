@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/service_selection_controller.dart';
-
 import 'package:flutter_application_1/core/color/constants.dart';
 import 'package:flutter_application_1/core/theme/app_shadows.dart';
-
 import 'package:flutter_application_1/view/components/shared/experience_syria_slider.dart';
 import 'package:flutter_application_1/view/components/shared/service_card.dart';
 import 'package:flutter_application_1/view/components/shared/tripmate.dart';
@@ -83,20 +81,14 @@ class ServiceSelection extends GetView<ServicesselectController> {
                         color: AppColors.background,
                       ),
                       clipBehavior: Clip.none,
-
                       padding: EdgeInsets.all(0),
                       child: ActionChip(
                         visualDensity: VisualDensity.compact,
-
-                        // 2. إلغاء مساحة اللمس الإضافية التي تسبب فراغاً من فوق وتحت
                         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-
-                        // 3. التأكد من أن البادينغ محكوم من قبلك فقط
                         padding: const EdgeInsets.symmetric(
                           horizontal: 12,
                           vertical: 10,
                         ),
-
                         backgroundColor: controller.selectedCity.value == "All"
                             ? AppColors.primary.withOpacity(0.3)
                             : AppColors.golden.withOpacity(0.3),
@@ -109,7 +101,11 @@ class ServiceSelection extends GetView<ServicesselectController> {
                         label: Text(
                           controller.selectedCity.value == "All"
                               ? "All Cities"
-                              : controller.selectedCity.value,
+                                    .tr // 👈 إضافة الترجمة هنا
+                              : controller
+                                    .selectedCity
+                                    .value
+                                    .tr, // 👈 ترجمة اسم المدينة إن وُجد بملف الترجمة
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: controller.selectedCity.value == "All"
@@ -125,9 +121,7 @@ class ServiceSelection extends GetView<ServicesselectController> {
                                 : AppColors.golden,
                           ),
                         ),
-
-                        onPressed: () => controller
-                            .showCityPicker(), // التابع الذي يظهر القائمة
+                        onPressed: () => controller.showCityPicker(),
                       ),
                     ),
                   ),
@@ -157,7 +151,6 @@ class ServiceSelection extends GetView<ServicesselectController> {
                         onTap: () {
                           controller.loaditemsbyservice(service.id);
                           Get.toNamed("/serviceitemsscreen");
-                          // Get.toNamed(service.routepath);
                         },
                       ),
                     );

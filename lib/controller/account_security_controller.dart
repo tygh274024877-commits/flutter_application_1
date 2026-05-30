@@ -28,7 +28,7 @@ class AccountSecurityController extends GetxController {
         newPasswordController.text.isEmpty ||
         confirmPasswordController.text.isEmpty) {
       Get.snackbar(
-        "warning".tr, // ترجمة كلمة تنبيه
+        "warning_title".tr, // ترجمة كلمة تنبيه
         "fill_all_fields_msg".tr, // ترجمة الرسالة
         backgroundColor: Color(0xFFD2775B),
         colorText: Colors.white,
@@ -39,7 +39,7 @@ class AccountSecurityController extends GetxController {
 
     if (newPasswordController.text != confirmPasswordController.text) {
       Get.snackbar(
-        "error".tr,
+        "error_title".tr,
         "passwords_not_match_msg".tr,
         backgroundColor: Colors.redAccent,
         colorText: Colors.white,

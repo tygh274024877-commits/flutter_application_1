@@ -8,6 +8,7 @@ import 'package:flutter_application_1/view/components/shared/waveheader.dart';
 import 'package:flutter_application_1/view/components/shared/custom_search_bar.dart';
 import 'package:flutter_application_1/view/components/shared/experience_syria_slider.dart';
 import 'package:flutter_application_1/view/components/shared/golden_widgets.dart';
+import 'package:flutter_application_1/view/screens/SearchScreen.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -45,13 +46,15 @@ class HomeScreen extends GetView<HomeController> {
                       ),
                     ),
                   ),
+                  // ... داخل الـ Stack في الـ HomeScreen
                   Positioned(
                     top: 160,
                     right: 30,
                     left: 30,
+                    // هذا هو المكان الجديد للـ CustomSearchBar المدموجة
                     child: CustomSearchBar(
-                      onTap: () {},
-                      text: "search_hint".tr, // مترجم
+                      onTap: () => Get.toNamed('/search'),
+                      text: "search_hint".tr,
                     ),
                   ),
                 ],

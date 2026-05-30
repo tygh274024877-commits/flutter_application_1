@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CircleActionButton extends StatelessWidget {
   final IconData icon;
@@ -44,7 +45,7 @@ class CircleActionButton extends StatelessWidget {
         ),
         const SizedBox(height: 5),
         Text(
-          label,
+          label.tr, // 👈 تفعيل الترجمة هنا للـ Label الممرر
           style: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold,

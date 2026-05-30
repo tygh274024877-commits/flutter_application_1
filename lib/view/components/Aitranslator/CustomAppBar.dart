@@ -17,9 +17,9 @@ class CustomAppBar extends GetView<AiTranslatorController> {
             icon: const Icon(Icons.arrow_back_ios, color: AppColors.BurntBrown),
             onPressed: () => Get.back(),
           ),
-          const Text(
-            "AI Translator",
-            style: TextStyle(
+          Text(
+            "ai_translator_title".tr, // 👈 تم تحويل النص إلى مفتاح مترجم
+            style: const TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
               color: AppColors.BurntBrown,

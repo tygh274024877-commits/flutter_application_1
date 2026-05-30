@@ -7,7 +7,7 @@ import '../../controller/userprofile_controller.dart';
 import '../../controller/profile_controller.dart';
 import '../../core/color/constants.dart';
 import '../components/shared/button_login.dart';
-import '../components/shared/build_profile_fields.dart'; // استدعاء الملف الجديد
+import '../components/shared/build_profile_fields.dart';
 
 class UserProfileScreen extends GetView<UserProfileController> {
   const UserProfileScreen({super.key});
@@ -50,7 +50,6 @@ class UserProfileScreen extends GetView<UserProfileController> {
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Column(
                 children: [
-                  // هنا الاستدعاء السحري الذي طلبته مروة
                   BuildProfileFields(controller: controller),
 
                   const SizedBox(height: 40),
@@ -61,6 +60,24 @@ class UserProfileScreen extends GetView<UserProfileController> {
                       onPressed: () => controller.saveProfile(),
                     ),
                   ),
+
+                  // --- إضافة الرابط الجديد ---
+                  const SizedBox(height: 20),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: GestureDetector(
+                      onTap: () => Get.toNamed('/signup'),
+                      child: Text(
+                        "create_new_account".tr,
+                        style: const TextStyle(
+                          color: AppColors.golden,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+
                   const SizedBox(height: 30),
                 ],
               ),
@@ -71,7 +88,7 @@ class UserProfileScreen extends GetView<UserProfileController> {
     );
   }
 
-  // تابع بناء الأفاتار (الذي يحتوي على الذهبي وحذف الصورة)
+  // التوابع (Methods) تظل كما هي في كودك الأصلي...
   Widget _buildAvatarWithDelete(
     BuildContext context,
     ProfileController mainController,

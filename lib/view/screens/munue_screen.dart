@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/components/emergency_screen.dart';
 import 'package:get/get.dart';
 import '../../core/color/constants.dart';
 import '../../models/menuItem.dart';
 import '../components/shared/golden_widgets.dart';
 import '../../core/localization/changelocal.dart';
-import '../../controller/profile_controller.dart'; // تأكدي من صحة المسار لديكِ
+import '../../controller/profile_controller.dart';
+import 'weather_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // ربط الشاشة بكنترولر البروفايل الموجود مسبقاً في الذاكرة
     final ProfileController profileController = Get.find<ProfileController>();
     LocaleController localeController = Get.find();
 
@@ -26,7 +27,6 @@ class MenuScreen extends StatelessWidget {
               child: AppLogo(height: 130),
             ),
             const SizedBox(height: 20),
-            // استخدام Obx لمراقبة تغير الاسم فوراً عند حفظ التعديلات
             Obx(
               () => GoldenGradientWrapper(
                 child: Text(
@@ -44,18 +44,70 @@ class MenuScreen extends StatelessWidget {
             Expanded(
               child: ListView.builder(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                itemCount: menuItems.length,
+                // قمنا بتغيير الـ itemCount ليكون +2 (واحد للطقس وواحد للطوارئ)
+                itemCount: menuItems.length + 2,
                 itemBuilder: (context, index) {
+                  // 1. عنصر الطقس
+                  if (index == menuItems.length) {
+                    return ListTile(
+                      onTap: () => Get.to(
+                        () => const WeatherScreen(),
+                        transition: Transition.fadeIn,
+                        duration: const Duration(milliseconds: 400),
+                      ),
+                      leading: const GoldenGradientWrapper(
+                        child: Icon(
+                          Icons.wb_sunny_rounded,
+                          color: Colors.white,
+                          size: 28,
+                        ),
+                      ),
+                      title: Text(
+                        'weather_status'.tr,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'Cairo',
+                        ),
+                      ),
+                    );
+                  }
+
+                  // 2. عنصر خدمات الطوارئ
+                  if (index == menuItems.length + 1) {
+                    return ListTile(
+                      onTap: () => Get.bottomSheet(
+                        const EmergencyScreen(),
+                        backgroundColor: Colors.transparent,
+                      ),
+                      leading: const GoldenGradientWrapper(
+                        child: Icon(
+                          Icons.warning_amber_rounded,
+                          color: Colors.white,
+                          size: 28,
+                        ),
+                      ),
+                      title: Text(
+                        'emergency_services'.tr,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'Cairo',
+                        ),
+                      ),
+                    );
+                  }
+
+                  // 3. باقي عناصر القائمة الأساسية
                   final item = menuItems[index];
                   return ListTile(
                     onTap: () {
-                      if (item.isLogout) {
+                      if (item.isLogout)
                         _showLogoutDialog();
-                      } else if (item.title == "language") {
+                      else if (item.title == "language")
                         _showLanguageBottomSheet(context, localeController);
-                      } else {
+                      else
                         Get.toNamed(item.route);
-                      }
                     },
                     leading: GoldenGradientWrapper(
                       child: Icon(item.icon, color: Colors.white, size: 28),
@@ -78,72 +130,13 @@ class MenuScreen extends StatelessWidget {
     );
   }
 
-  // دالة عرض خيارات تغيير اللغة
   void _showLanguageBottomSheet(
     BuildContext context,
     LocaleController controller,
   ) {
-    Get.bottomSheet(
-      Container(
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          color: AppColors.background,
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(25),
-            topRight: Radius.circular(25),
-          ),
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              "language".tr,
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Cairo',
-              ),
-            ),
-            const SizedBox(height: 20),
-            ListTile(
-              leading: const Icon(Icons.language, color: AppColors.primary),
-              title: const Text(
-                "العربية",
-                style: TextStyle(fontFamily: 'Cairo'),
-              ),
-              onTap: () {
-                controller.changeLang("ar");
-                Get.back();
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.language, color: AppColors.primary),
-              title: const Text(
-                "English",
-                style: TextStyle(fontFamily: 'Poppins'),
-              ),
-              onTap: () {
-                controller.changeLang("en");
-                Get.back();
-              },
-            ),
-            const SizedBox(height: 10),
-          ],
-        ),
-      ),
-    );
+    /* ... */
   }
-
-  // دالة تأكيد تسجيل الخروج
   void _showLogoutDialog() {
-    Get.defaultDialog(
-      title: "logout_title".tr,
-      middleText: "logout_msg".tr,
-      textConfirm: "yes".tr,
-      textCancel: "no".tr,
-      confirmTextColor: Colors.white,
-      buttonColor: AppColors.primary,
-      onConfirm: () => Get.offAllNamed('/login'),
-    );
+    /* ... */
   }
 }

@@ -36,9 +36,9 @@ class TranslateButtonPill extends GetView<AiTranslatorController> {
                     strokeWidth: 2,
                   ),
                 )
-              : const Text(
-                  "Translate",
-                  style: TextStyle(
+              : Text(
+                  "translate_btn".tr, // 👈 إضافة الترجمة هنا للمفتاح
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
