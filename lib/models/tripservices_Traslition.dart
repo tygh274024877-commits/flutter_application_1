@@ -13,12 +13,12 @@ class Tripservice {
 
 final List<Tripservice> Services = [
   Tripservice(
-    title: "book_full_trip",
+    title: "book_full_trip", // يتم ربطه بمفتاح الترجمة داخل الـ View
     imagepath: "assets/images/BookaFullTrip.png",
     routepage: "/fullbooktrip",
   ),
   Tripservice(
-    title: "travel_services",
+    title: "travel_services", // يتم ربطه بمفتاح الترجمة داخل الـ View
     imagepath: "assets/images/TravelServices.png",
     routepage: "/servicesselect",
   ),
@@ -40,25 +40,25 @@ class ServiceModel {
   static final List<ServiceModel> servicesList = [
     ServiceModel(
       id: 1,
-      title: 'flights',
+      title: 'flights', // مفتاح ترجمة الطيران
       icon: Icons.airplanemode_active,
       routepath: '/flights',
     ),
     ServiceModel(
       id: 2,
-      title: 'hotels',
+      title: 'hotels', // مفتاح ترجمة الفنادق
       icon: Icons.hotel,
       routepath: '/hotels',
     ),
     ServiceModel(
       id: 3,
-      title: 'cars',
+      title: 'cars', // مفتاح ترجمة السيارات
       icon: Icons.directions_car,
       routepath: '/cars',
     ),
     ServiceModel(
       id: 4,
-      title: 'restaurants',
+      title: 'restaurants', // مفتاح ترجمة المطاعم
       icon: Icons.restaurant_rounded,
       routepath: '/resturants',
     ),

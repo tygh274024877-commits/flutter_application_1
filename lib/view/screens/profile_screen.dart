@@ -2,10 +2,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+// تأكدي من صحة هذه المسارات في مشروعك
 import 'package:flutter_application_1/view/components/shared/waveheader.dart';
 import '../../controller/profile_controller.dart';
 import '../../core/color/constants.dart';
 import '../../core/theme/app_shadows.dart';
+import 'support_screen.dart'; // استيراد صفحة الدعم
 
 class ProfileScreen extends GetView<ProfileController> {
   const ProfileScreen({super.key});
@@ -92,13 +94,16 @@ class ProfileScreen extends GetView<ProfileController> {
                       Icons.payment_outlined,
                       "payment".tr,
                       AppColors.primary,
-                      () {},
+                      () => Get.toNamed(
+                        '/payment',
+                      ), // بما أنكِ عرفتِها في GetPages
                     ),
+                    // --- تعديل زر المساعدة هنا ---
                     _menuItem(
                       Icons.help_outline,
                       "help".tr,
                       AppColors.primary,
-                      () {},
+                      () => Get.to(() => const SupportScreen()),
                     ),
                   ]),
                 ],

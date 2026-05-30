@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class TextFieldLogin extends StatefulWidget {
   final String label;
+  final String? hintText; // تم إضافته
   final IconData icon;
   final bool isPassword;
   final bool? obscureText;
   final TextEditingController controller;
   final VoidCallback? onIconTap;
   final String? Function(String?)? validator;
+  final TextInputType? keyboardType;
 
   const TextFieldLogin({
     super.key,
     required this.label,
+    this.hintText, // تم إضافته
     required this.icon,
     this.isPassword = false,
     this.obscureText,
     required this.controller,
     this.onIconTap,
     this.validator,
+    this.keyboardType,
   });
 
   @override
@@ -62,6 +65,7 @@ class _TextFieldLoginState extends State<TextFieldLogin> {
       child: TextFormField(
         controller: widget.controller,
         focusNode: _focusNode,
+        keyboardType: widget.keyboardType ?? TextInputType.text,
         obscureText: widget.obscureText ?? false,
         validator: widget.validator,
         style: const TextStyle(
@@ -70,6 +74,11 @@ class _TextFieldLoginState extends State<TextFieldLogin> {
         ),
         decoration: InputDecoration(
           labelText: widget.label,
+          hintText: widget.hintText, // هنا الربط
+          hintStyle: TextStyle(
+            color: Colors.grey.withOpacity(0.7),
+            fontSize: 13,
+          ), // مظهر التلميح
           labelStyle: const TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,

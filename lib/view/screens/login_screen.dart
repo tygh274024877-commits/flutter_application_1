@@ -48,7 +48,7 @@ class LoginScreen extends GetView<LoginController> {
                             ),
                             TextSpan(
                               text: "Mate",
-                              style: TextStyle(color: Colors.black),
+                              style: TextStyle(color: Color(0xFF65554E)),
                             ),
                           ],
                         ),

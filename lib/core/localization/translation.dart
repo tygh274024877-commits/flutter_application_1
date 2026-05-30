@@ -90,6 +90,9 @@ class MyTranslation extends Translations {
       "search_hint": "Search Destinations",
       "featured_dest": "Featured Destinations",
       "see_all": "See All",
+      "all_cities": "All Cities",
+
+      // --- Services ---
       "book_full_trip": "Book a Full Trip",
       "travel_services": "Travel Services",
       "flights": "Flights",
@@ -120,6 +123,180 @@ class MyTranslation extends Translations {
           "The world's most beautiful and best-preserved castle",
       "krak_des_chevaliers_detail":
           "Located in Homs and listed as a UNESCO World Heritage site, it is known as the most complete example of defensive castles...",
+
+      // --- Support & Contact ---
+      "support_title": "Help & Support",
+      "support_header": "How can we help you?",
+      "support_sub_header": "Our team is here to assist you at any time",
+      "faq_card": "Frequently Asked Questions",
+      "whatsapp_card": "Contact via WhatsApp",
+      "phone_card": "Direct Call",
+      "complaints_card": "Submit a Complaint",
+      "complaint_hint": "Write your complaint here...",
+      "user_reviews": "User Reviews",
+      "submit_complaint": "Submit a Complaint",
+      "we_are_here": "We are here to listen to you..",
+      "complaint_disclaimer":
+          "Please describe the issue you encountered, and the TripMate team will follow up immediately once you select one of our numbers.",
+      "or_call_us": "Or feel free to call us directly",
+      "send_complaint": "Submit Complaint",
+      "work_time_sorry_title": "Outside Working Hours",
+      "work_time_sorry_msg":
+          "Sorry, our support team is only available from 9 AM to 10 PM.",
+      "app_open_error_msg": "Could not open the required app or link.",
+      "whatsapp_sheet_title": "Contact us via WhatsApp",
+      "phone_sheet_title": "Direct Call",
+      "complaint_sheet_title": "Send complaint via",
+      "first_number": "First Number",
+      "second_number": "Second Number",
+      "complaint_empty_msg": "Please write your complaint before sending.",
+
+      // --- UI & AI Translator ---
+      'ai_translator_title': 'AI Translator',
+      'translate_btn': 'Translate',
+      'tap_to_select_text': 'Tap to select text',
+      'translate_all': 'Translate All',
+      'English': 'English',
+      'Arabic': 'Arabic',
+      'connection_error_msg': 'Network connection issue',
+      'speech_empty_warning': 'No speech recognized, please try again.',
+      'ocr_empty_warning':
+          'No clear text found in the image. Please try again with better lighting.',
+      'ocr_failed_error': 'Failed to process image and extract text.',
+
+      // --- Weather ---
+      "loading_location": "Loading location...",
+      "loading": "Loading",
+      "unknown": "Unknown",
+      "error_finding_area": "Could not find weather for this area.",
+      "choose_city_title": "Choose City",
+      "enter_text_hint": "Enter area name...",
+      "feels_like": "Feels like",
+      "my_location": "My Location",
+      "hourly_forecast": "Hourly Forecast",
+      "daily_forecast": "Daily Forecast",
+
+      // --- FAQ ---
+      'faq_q1': 'How can I confirm my hotel booking?',
+      'faq_a1':
+          "After choosing the hotel, you will receive an immediate initial confirmation notification, and our team will contact you to confirm the final booking by phone.",
+      'faq_q2': 'Does TripMate provide airport transfer services?',
+      'faq_a2':
+          "Yes, you can request a transfer service from the additional services section when booking any trip or hotel inside Syria.",
+      'faq_q3': 'What is the cancellation policy for tourist trips?',
+      'faq_a3':
+          'You can cancel the booking and get a full refund 48 hours before the trip date through the application.',
+      'faq_q4': 'How do I pay for the trip inside Syria?',
+      'faq_a4':
+          'We provide payment methods including cash payment at our office in Damascus, or via local electronic transfer services (such as Syriatel Cash).',
+      'faq_q5': 'Are the announced trips inclusive of personal expenses?',
+      'faq_a5':
+          'Usually our trips include transportation, accommodation and breakfast. Exact details can be found in the description of each trip.',
+
+      // --- Filtering & Cities ---
+      'all_cities_label': 'All Cities',
+      'Damascus': 'Damascus',
+      'Lattakia': 'Lattakia',
+      'Aleppo': 'Aleppo',
+
+      // --- Hotels & Restaurants ---
+      'hotel_fs_name': 'Four Seasons',
+      'hotel_fs_loc': 'Damascus - Umayyad Square',
+      'hotel_fs_desc':
+          'A luxurious hotel offering panoramic city views and world-class 5-star services.',
+      'hotel_bw_name': 'Beit Al Wali',
+      'hotel_bw_loc': 'Old Damascus - Bab Touma',
+      'hotel_bw_desc':
+          'A unique heritage experience in the heart of Old Damascus, featuring authentic Shami architecture.',
+      'hotel_af_name': 'Afamia Resort',
+      'hotel_af_loc': 'Lattakia - Blue Beach',
+      'hotel_af_desc':
+          'An integrated tourist resort with high privacy, ideal for family vacations on the sea.',
+      'hotel_ca_name': "Cote d'Azur",
+      'hotel_ca_loc': 'Lattakia - Southern Corniche',
+      'hotel_ca_desc':
+          'A modern hotel with a direct view of the Mediterranean, combining tranquility and luxury.',
+      'hotel_sh_name': 'Sheraton Aleppo',
+      'hotel_sh_loc': 'Aleppo - City Center',
+      'hotel_sh_desc':
+          'A long-standing hotel located in a vibrant area, offering upscale hotel services for business people and tourists.',
+      'rest_naranj_name': 'Naranj Restaurant',
+      'rest_naranj_loc': 'Damascus - Straight Street',
+      'rest_naranj_desc':
+          'One of the most famous restaurants in Old Damascus, serving delicious traditional Shami cuisine.',
+      'rest_zaitouna_name': 'Zaitouna Restaurant',
+      'rest_zaitouna_loc': 'Lattakia - Western Corniche',
+      'rest_zaitouna_desc':
+          'A restaurant specializing in fresh seafood with quiet seating directly on the sea.',
+      'rest_wanes_name': 'Wanes Restaurant',
+      'rest_wanes_loc': 'Aleppo - Aziziya',
+      'rest_wanes_desc':
+          'An authentic Aleppine restaurant famous for serving Aleppine Kibbeh and grills with an unforgettable flavor.',
+      'wifi': 'WiFi',
+      'pool': 'Pool',
+      'gym': 'Gym',
+      'spa': 'Spa',
+      'trad_decor': 'Traditional Decor',
+      'restaurant_feat': 'Restaurant',
+      'beach_access': 'Beach Access',
+      'kids_area': 'Kids Area',
+      'sea_view': 'Sea View',
+      'central_loc': 'Central Location',
+      'events_hall': 'Events Hall',
+      'menu_oriental': 'Oriental',
+      'menu_appetizers': 'Shami Appetizers',
+      'menu_grills': 'Grills',
+      'menu_fish': 'Fish',
+      'menu_seafood': 'Seafood',
+      'menu_salads': 'Salads',
+      'menu_aleppo_grills': 'Aleppo Grills',
+      'menu_kibbeh': 'Kibbeh Varieties',
+      'menu_sweets': 'Sweets',
+
+      // --- Feedback & Ratings ---
+      'rating_question': 'How would you rate our app?',
+      'rating_subtitle': 'Your feedback helps us provide a better experience.',
+      'cancel': 'Cancel',
+      'send': 'Send',
+      'select_stars_warning': 'Please select stars first to rate!',
+      'rating_success_high_title': 'Thank you!',
+      'rating_success_high_msg': 'We are thrilled that you love the app.',
+      'rating_success_low_title': 'Thank you for rating',
+      'rating_success_low_msg':
+          'We promise to improve your experience in future updates.',
+      'default_comment_1': 'Wonderful app and excellent user experience!',
+      'default_comment_2':
+          'Fast services and very accurate information, best of luck.',
+      'comment_success_title': 'Sent Successfully',
+      'comment_success_msg':
+          'Thank you for sharing your valuable feedback with us!',
+      'delete_comment_title': 'Delete Comment',
+      'delete_comment_confirm': 'Are you sure you want to delete this comment?',
+      'delete_btn': 'Delete',
+      'edit_comment_title': 'Edit Comment',
+      'save_btn': 'Save',
+      "weather_status": "Weather Status",
+      // في قسم 'en':
+      "humidity": "Humidity",
+      "wind_speed": "Wind Speed",
+      "date": "Date",
+      "low": "Low",
+      "high": "High",
+      "weather_desc": "Weather Description",
+      "wind": "Wind",
+
+      "uv_index": "UV Index",
+      "km_h": "km/h",
+      "enter_text_hint": "Enter district or neighborhood name",
+      "emergency_services": "Emergency Services",
+      "syria_emergency_note": "These are the authorized numbers in Syria",
+      "ambulance": "Ambulance",
+      "rescue": "Rescue",
+      "fire_department": "Fire Department",
+      "traffic_police": "Traffic Police",
+      "civil_defense": "Civil Defense",
+      "did_you_forget_password": "Did you forget your password?",
+      "create_new_account": "Create a new account",
     },
     "ar": {
       // --- Auth & General ---
@@ -132,7 +309,8 @@ class MyTranslation extends Translations {
       "signup_prompt": "ليس لديك حساب؟ ",
       "signup_link": "سجل الآن",
       "create_acc": "أنشئ حسابك الخاص!",
-      "join_us": "انضم إلى تريب ميت اليوم!",
+      "join_us": "انضم إلى",
+      "today": "اليوم!",
       "full_name": "الاسم الكامل",
       "confirm_pass": "تأكيد كلمة المرور",
       "terms": "أوافق على الشروط والأحكام",
@@ -209,12 +387,15 @@ class MyTranslation extends Translations {
       "search_hint": "ابحث عن وجهتك",
       "featured_dest": "وجهات مميزة",
       "see_all": "عرض الكل",
-      "book_full_trip": "حجز رحلة كاملة",
-      "travel_services": "خدمات السفر",
-      "flights": "طيران",
-      "hotels": "فنادق",
-      "cars": "سيارات",
-      "restaurants": "مطاعم",
+      "all_cities": "كل المدن",
+
+      // --- الخدمات ---
+      'book_full_trip': 'حجز رحلة متكاملة',
+      'travel_services': 'الخدمات السياحية',
+      'flights': 'الطيران',
+      'hotels': 'الفنادق',
+      'cars': 'السيارات',
+      'restaurants': 'المطاعم',
 
       // --- Destinations & Slider ---
       "slider_desc_1": "حجارة تروي ألف قصة",
@@ -236,6 +417,178 @@ class MyTranslation extends Translations {
       "krak_des_chevaliers_desc": "أجمل قلعة في العالم وأكثرها حفظاً",
       "krak_des_chevaliers_detail":
           "تقع في حمص ومدرجة على قائمة التراث العالمي لليونسكو...",
+
+      // --- Support & Contact ---
+      "support_title": "الدعم والمساندة",
+      "support_header": "كيف يمكننا مساعدتك؟",
+      "support_sub_header": "فريقنا متواجد دائماً للإجابة على استفساراتك",
+      "faq_card": "الأسئلة الشائعة",
+      "whatsapp_card": "تواصل عبر واتساب",
+      "phone_card": "اتصال مباشر",
+      "complaints_card": "تقديم شكوى",
+      "complaint_hint": "اكتب تفاصيل الشكوى هنا...",
+      "user_reviews": "آراء المستخدمين",
+      "submit_complaint": "تقديم شكوى",
+      "we_are_here": "نحن هنا لنسمعك..",
+      "complaint_disclaimer":
+          "يرجى شرح المشكلة التي واجهتها وسيقوم فريق TripMate بمتابعتها فوراً عبر اختيار أحد أرقامنا.",
+      "or_call_us": "أو تفضل بالاتصال بنا مباشرة",
+      "send_complaint": "إرسال الشكوى",
+      'work_time_sorry_title': 'خارج أوقات العمل',
+      'work_time_sorry_msg':
+          'عذراً، فريق الدعم متاح فقط من الساعة 9 صباحاً وحتى 10 مساءً.',
+      'error_title': 'خطأ',
+      'app_open_error_msg': 'تعذر فتح التطبيق المطلوب أو الرابط.',
+      'whatsapp_sheet_title': 'تواصل معنا عبر واتساب',
+      'phone_sheet_title': 'اتصال مباشر',
+      'complaint_sheet_title': 'إرسال الشكوى عبر',
+      'first_number': 'الرقم الأول',
+      'second_number': 'الرقم الثاني',
+      'complaint_empty_msg': 'الرجاء كتابة الشكوى أولاً قبل الإرسال.',
+
+      // --- UI & AI Translator ---
+      'ai_translator_title': 'مترجم الذكاء الاصطناعي',
+      'translate_btn': 'ترجم',
+      'tap_to_select_text': 'اضغط لتحديد نص',
+      'translate_all': 'ترجمة الكل',
+      'English': 'الإنكليزية',
+      'Arabic': 'العربية',
+      'connection_error_msg': 'مشكلة في الاتصال بالشبكة',
+      'speech_empty_warning': 'لم يتم التعرف على أي صوت، يرجى المحاولة مجدداً.',
+      'ocr_empty_warning':
+          'لم يتم العثور على نص واضح في الصورة، يرجى إعادة المحاولة بإضاءة أفضل.',
+      'ocr_failed_error': 'فشل معالجة الصورة واستخراج النص.',
+
+      // --- Weather ---
+      "loading_location": "جاري تحديد الموقع...",
+      "loading": "جاري التحميل",
+      "unknown": "غير معروف",
+      "error_finding_area": "تعذر العثور على الطقس في هذه المنطقة.",
+      "choose_city_title": "اختر المدينة",
+      "enter_text_hint": "أدخل اسم المنطقة...",
+      "save": "حفظ",
+      "feels_like": "يشعر كأنه",
+      "my_location": "موقعي الحالي",
+      "hourly_forecast": "توقعات الساعات القادمة",
+      "daily_forecast": "توقعات الأيام القادمة",
+
+      // --- FAQ ---
+      'faq_q1': 'كيف يمكنني تأكيد حجزي في الفندق؟',
+      'faq_a1':
+          'بعد اختيار الفندق، سيصلك إشعار فوري بالتأكيد الأولي، وسيقوم فريقنا بالتواصل معك لتأكيد الحجز النهائي عبر الهاتف.',
+      'faq_q2': 'هل يوفر تطبيق TripMate خدمة النقل من المطار؟',
+      'faq_a2':
+          "نعم، يمكنك طلب خدمة 'الترانسفير' من قسم الخدمات الإضافية عند حجز أي رحلة أو فندق داخل سوريا.",
+      'faq_q3': 'ما هي سياسة إلغاء الرحلات السياحية؟',
+      'faq_a3':
+          'يمكنك إلغاء الحجز واسترداد المبلغ كاملاً قبل 48 ساعة من موعد الرحلة من خلال التطبيق.',
+      'faq_q4': 'كيف أدفع ثمن الرحلة داخل سوريا؟',
+      'faq_a4':
+          'نوفر طرق دفع تشمل الدفع نقداً في مكتبنا بدمشق، أو عبر خدمات التحويل الإلكتروني المحلية (مثل سيريتل كاش).',
+      'faq_q5': 'هل الرحلات المعلنة شاملة للمصاريف الشخصية؟',
+      'faq_a5':
+          'عادةً تشمل رحلاتنا النقل والإقامة ووجبة الإفطار. التفاصيل الدقيقة تجدينها في وصف كل رحلة.',
+
+      // --- Filtering & Cities ---
+      'all_cities_label': 'كل المحافظات',
+      'Damascus': 'دمشق',
+      'Lattakia': 'اللاذقية',
+      'Aleppo': 'حلب',
+
+      // --- Hotels & Restaurants ---
+      'hotel_fs_name': 'فور سيزنز',
+      'hotel_fs_loc': 'دمشق - ساحة الأمويين',
+      'hotel_fs_desc':
+          'فندق فاخر يوفر إطلالات بانورامية على المدينة وخدمات عالمية من فئة 5 نجوم.',
+      'hotel_bw_name': 'بيت الوالي',
+      'hotel_bw_loc': 'دمشق القديمة - باب توما',
+      'hotel_bw_desc':
+          'تجربة تراثية فريدة في قلب دمشق القديمة، يتميز بالعمارة الشامية الأصيلة.',
+      'hotel_af_name': 'منتجع أفاميا',
+      'hotel_af_loc': 'اللاذقية - الشاطئ الأزرق',
+      'hotel_af_desc':
+          'منتجع سياحي متكامل بخصوصية عالية، مثالي للعطلات العائلية على البحر.',
+      'hotel_ca_name': 'كوت دازور',
+      'hotel_ca_loc': 'اللاذقية - الكورنيش الجنوبي',
+      'hotel_ca_desc':
+          'فندق عصري بإطلالة مباشرة على المتوسط، يجمع بين الهدوء والرفاهية.',
+      'hotel_sh_name': 'شيراتون حلب',
+      'hotel_sh_loc': 'حلب - مركز المدينة',
+      'hotel_sh_desc':
+          'فندق عريق يقع في منطقة حيوية، يقدم خدمات فندقية راقية لرجال الأعمال والسياح.',
+      'rest_naranj_name': 'مطعم نارنج',
+      'rest_naranj_loc': 'دمشق - الشارع المستقيم',
+      'rest_naranj_desc':
+          'أحد أشهر مطاعم دمشق القديمة، يقدم أشهى المأكولات الشامية التقليدية.',
+      'rest_zaitouna_name': 'مطعم الزيتونة',
+      'rest_zaitouna_loc': 'اللاذقية - الكورنيش الغربي',
+      'rest_zaitouna_desc':
+          'مطعم متخصص بالمأكولات البحرية الطازجة مع جلسات هادئة على البحر مباشرة.',
+      'rest_wanes_name': 'مطعم ونيس',
+      'rest_wanes_loc': 'حلب - العزيزية',
+      'rest_wanes_desc':
+          'مطعم حلبي أصيل يشتهر بتقديم الكبب الحلبية والمشاوي بنكهة لا تُنسى.',
+      'wifi': 'واي فاي',
+      'pool': 'مسبح',
+      'gym': 'صالة رياضة',
+      'spa': 'سبا',
+      'trad_decor': 'ديكور تراثي',
+      'restaurant_feat': 'مطعم',
+      'beach_access': 'دخول للشاطئ',
+      'kids_area': 'منطقة أطفال',
+      'sea_view': 'إطلالة بحرية',
+      'central_loc': 'موقع مركزي',
+      'events_hall': 'قاعة مناسبات',
+      'menu_oriental': 'شرقي',
+      'menu_appetizers': 'مقبلات شامية',
+      'menu_grills': 'مشاوي',
+      'menu_fish': 'أسماك',
+      'menu_seafood': 'ثمار البحر',
+      'menu_salads': 'سلطات',
+      'menu_aleppo_grills': 'مشاوي حلبية',
+      'menu_kibbeh': 'كبة بأنواعها',
+      'menu_sweets': 'حلويات',
+
+      // --- Feedback & Ratings ---
+      'rating_question': 'ما هو تقييمك لتطبيقنا؟',
+      'rating_subtitle': 'رأيك يهمنا لمساعدتنا في تقديم تجربة أفضل.',
+      'cancel': 'إلغاء',
+      'send': 'إرسال',
+      'select_stars_warning': 'الرجاء اختيار النجوم أولاً للتقييم!',
+      'rating_success_high_title': 'شكراً لك!',
+      'rating_success_high_msg': 'سعداء جداً لأن التطبيق نال إعجابك.',
+      'rating_success_low_title': 'شكراً لتقييمك',
+      'rating_success_low_msg':
+          'نعدك بالعمل على تحسين التجربة في التحديثات القادمة.',
+      'default_comment_1': 'تطبيق رائع جداً وتجربة مستخدم ممتازة!',
+      'default_comment_2': 'الخدمات سريعة والمعلومات دقيقة جداً، بالتوفيق.',
+      'comment_success_title': 'تم الإرسال',
+      'comment_success_msg': 'شكراً لك على مشاركتنا رأيك القيمة!',
+      'delete_comment_title': 'حذف التعليق',
+      'delete_comment_confirm': 'هل أنت متأكد من أنك تريد حذف هذا التعليق؟',
+      'delete_btn': 'حذف',
+      'edit_comment_title': 'تعديل التعليق',
+      'save_btn': 'حفظ',
+      "weather_status": "حالة الطقس",
+      "humidity": "الرطوبة",
+      "wind_speed": "سرعة الرياح",
+      "date": "التاريخ",
+      "low": "الصغرى",
+      "high": "العظمى",
+      "weather_desc": "وصف الطقس",
+      "wind": "الرياح",
+      "enter_text_hint": "أدخل اسم المنطقة أو الحي",
+      "uv_index": "مؤشر UV",
+      "km_h": "كم/س",
+      "emergency_services": "خدمات الطوارئ",
+      "syria_emergency_note": "هذه الأرقام المعتمدة داخل سوريا",
+      "ambulance": "الإسعاف",
+      "rescue": "النجدة",
+      "fire_department": "الإطفاء",
+      "traffic_police": "شرطة المرور",
+      "civil_defense": "الدفاع المدني",
+      "did_you_forget_password": "هل نسيت كلمة السر؟",
+      "create_new_account": "إنشاء حساب جديد",
     },
   };
 }

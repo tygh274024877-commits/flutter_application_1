@@ -29,8 +29,10 @@ class GlassInputField extends GetView<AiTranslatorController> {
           return SingleChildScrollView(
             child: Text(
               controller.translatedText.value == "" ||
-                      controller.translatedText.value == "الترجمة ستظهر هنا..."
+                      controller.translatedText.value ==
+                          "translation_placeholder".tr
                   ? hint
+                        .tr // 👈 تفعيل الترجمة للمفتاح الممرر
                   : controller.translatedText.value,
               style: const TextStyle(fontSize: 18, color: AppColors.BurntBrown),
             ),
@@ -49,7 +51,7 @@ class GlassInputField extends GetView<AiTranslatorController> {
             onChanged: (val) => controller.sourceText.value = val,
             style: const TextStyle(fontSize: 18, color: AppColors.BurntBrown),
             decoration: InputDecoration(
-              hintText: hint,
+              hintText: hint.tr, // 👈 تفعيل الترجمة للمفتاح الممرر
               border: InputBorder.none,
               hintStyle: const TextStyle(color: AppColors.hintGrey),
             ),

@@ -15,9 +15,6 @@ class AiTranslatorScreen extends GetView<AiTranslatorController> {
 
   @override
   Widget build(BuildContext context) {
-    // ملاحظة: تأكدي أنكِ قمتِ بعمل Get.put للكنترولر في الـ Binding أو قبل الانتقال لهذه الشاشة
-    // إذا لم تكوني تستخدمين Bindings، يمكنك إبقاء Get.put هنا أو الأفضل وضعها في أول ملف الـ main أو الـ Navigation
-
     return Scaffold(
       backgroundColor: AppColors.translatorBg,
       resizeToAvoidBottomInset: false,
@@ -36,11 +33,19 @@ class AiTranslatorScreen extends GetView<AiTranslatorController> {
                         SizedBox(height: 10),
                         LanguageSelector(),
                         SizedBox(height: 25),
-                        GlassInputField(hint: "Enter text...", isResult: false),
+                        // تمرير نص المفتاح مترجماً 👈
+                        GlassInputField(
+                          hint: "enter_text_hint",
+                          isResult: false,
+                        ),
                         SizedBox(height: 35),
                         TranslateButtonPill(),
                         SizedBox(height: 35),
-                        GlassInputField(hint: "Translation...", isResult: true),
+                        // تمرير نص المفتاح مترجماً 👈
+                        GlassInputField(
+                          hint: "translation_hint",
+                          isResult: true,
+                        ),
                       ],
                     ),
                   ),

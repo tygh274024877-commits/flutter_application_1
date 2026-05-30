@@ -11,14 +11,14 @@ class InteractiveOcrScreen extends GetView<AiTranslatorController> {
     return Scaffold(
       backgroundColor: AppColors.black,
       appBar: AppBar(
-        title: const Text("اضغط لتحديد نص"),
+        title: Text("tap_to_select_text".tr), // 👈 إضافة الترجمة هنا
         backgroundColor: AppColors.primary,
         actions: [
           TextButton(
             onPressed: () => controller.translateAll(),
-            child: const Text(
-              "ترجمة الكل",
-              style: TextStyle(
+            child: Text(
+              "translate_all".tr, // 👈 إضافة الترجمة هنا
+              style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),

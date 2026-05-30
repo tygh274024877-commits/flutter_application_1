@@ -1,55 +1,52 @@
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
+
 Map<int, Map<String, List<Map<String, dynamic>>>> detailedData = {
   2: {
     // 🏨 قسم الفنادق (Hotels)
     "Damascus": [
       {
         "id": "h1",
-        "name": "Four Seasons",
-        "locationName": "دمشق - ساحة الأمويين",
+        "name": "hotel_fs_name".tr,
+        "locationName": "hotel_fs_loc".tr,
         "image": "assets/images/hotel1.jpg",
-        "description":
-            "فندق فاخر يوفر إطلالات بانورامية على المدينة وخدمات عالمية من فئة 5 نجوم.",
-        "features": ["WiFi", "Pool", "Gym", "Spa"],
+        "description": "hotel_fs_desc".tr,
+        "features": ["wifi".tr, "pool".tr, "gym".tr, "spa".tr],
       },
       {
         "id": "h2",
-        "name": "Beit Al Wali",
-        "locationName": "دمشق القديمة - باب توما",
+        "name": "hotel_bw_name".tr,
+        "locationName": "hotel_bw_loc".tr,
         "image": "assets/images/wali.jpg",
-        "description":
-            "تجربة تراثية فريدة في قلب دمشق القديمة، يتميز بالعمارة الشامية الأصيلة.",
-        "features": ["Traditional Decor", "WiFi", "Restaurant"],
+        "description": "hotel_bw_desc".tr,
+        "features": ["trad_decor".tr, "wifi".tr, "restaurant_feat".tr],
       },
     ],
     "Lattakia": [
       {
         "id": "h3",
-        "name": "Afamia Resort",
-        "locationName": "اللاذقية - الشاطئ الأزرق",
+        "name": "hotel_af_name".tr,
+        "locationName": "hotel_af_loc".tr,
         "image": "assets/images/afamia.jpg",
-        "description":
-            "منتجع سياحي متكامل بخصوصية عالية، مثالي للعطلات العائلية على البحر.",
-        "features": ["Beach Access", "Pool", "Kids Area"],
+        "description": "hotel_af_desc".tr,
+        "features": ["beach_access".tr, "pool".tr, "kids_area".tr],
       },
       {
         "id": "h4",
-        "name": "Cote d'Azur",
-        "locationName": "اللاذقية - الكورنيش الجنوبي",
+        "name": "hotel_ca_name".tr,
+        "locationName": "hotel_ca_loc".tr,
         "image": "assets/images/cote.jpg",
-        "description":
-            "فندق عصري بإطلالة مباشرة على المتوسط، يجمع بين الهدوء والرفاهية.",
-        "features": ["Sea View", "WiFi", "Spa"],
+        "description": "hotel_ca_desc".tr,
+        "features": ["sea_view".tr, "wifi".tr, "spa".tr],
       },
     ],
     "Aleppo": [
       {
         "id": "h5",
-        "name": "Sheraton Aleppo",
-        "locationName": "حلب - مركز المدينة",
+        "name": "hotel_sh_name".tr,
+        "locationName": "hotel_sh_loc".tr,
         "image": "assets/images/sheraton_aleppo.jpg",
-        "description":
-            "فندق عريق يقع في منطقة حيوية، يقدم خدمات فندقية راقية لرجال الأعمال والسياح.",
-        "features": ["Central Location", "WiFi", "Events Hall"],
+        "description": "hotel_sh_desc".tr,
+        "features": ["central_loc".tr, "wifi".tr, "events_hall".tr],
       },
     ],
   },
@@ -58,34 +55,31 @@ Map<int, Map<String, List<Map<String, dynamic>>>> detailedData = {
     "Damascus": [
       {
         "id": "r1",
-        "name": "Naranj Restaurant",
-        "locationName": "دمشق - الشارع المستقيم",
+        "name": "rest_naranj_name".tr,
+        "locationName": "rest_naranj_loc".tr,
         "image": "assets/images/naranj.jpg",
-        "description":
-            "أحد أشهر مطاعم دمشق القديمة، يقدم أشهى المأكولات الشامية التقليدية.",
-        "menu": ["شرقي", "مقبلات شامية", "مشاوي"],
+        "description": "rest_naranj_desc".tr,
+        "menu": ["menu_oriental".tr, "menu_appetizers".tr, "menu_grills".tr],
       },
     ],
     "Lattakia": [
       {
         "id": "r2",
-        "name": "Zaitouna Restaurant",
-        "locationName": "اللاذقية - الكورنيش الغربي",
+        "name": "rest_zaitouna_name".tr,
+        "locationName": "rest_zaitouna_loc".tr,
         "image": "assets/images/zaitouna.jpg",
-        "description":
-            "مطعم متخصص بالمأكولات البحرية الطازجة مع جلسات هادئة على البحر مباشرة.",
-        "menu": ["أسماك", "ثمار البحر", "سلطات"],
+        "description": "rest_zaitouna_desc".tr,
+        "menu": ["menu_fish".tr, "menu_seafood".tr, "menu_salads".tr],
       },
     ],
     "Aleppo": [
       {
         "id": "r3",
-        "name": "Wanes Restaurant",
-        "locationName": "حلب - العزيزية",
+        "name": "rest_wanes_name".tr,
+        "locationName": "rest_wanes_loc".tr,
         "image": "assets/images/wanes.jpg",
-        "description":
-            "مطعم حلبي أصيل يشتهر بتقديم الكبب الحلبية والمشاوي بنكهة لا تُنسى.",
-        "menu": ["مشاوي حلبية", "كبة بأنواعها", "حلويات"],
+        "description": "rest_wanes_desc".tr,
+        "menu": ["menu_aleppo_grills".tr, "menu_kibbeh".tr, "menu_sweets".tr],
       },
     ],
   },

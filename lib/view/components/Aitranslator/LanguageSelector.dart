@@ -13,7 +13,10 @@ class LanguageSelector extends GetView<AiTranslatorController> {
       children: [
         Obx(
           () => Text(
-            controller.sourceLang.value,
+            controller
+                .sourceLang
+                .value
+                .tr, // 👈 ترجمة اسم اللغة القادمة من الكنترولر
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               color: AppColors.BurntBrown,
@@ -30,7 +33,10 @@ class LanguageSelector extends GetView<AiTranslatorController> {
         ),
         Obx(
           () => Text(
-            controller.targetLang.value,
+            controller
+                .targetLang
+                .value
+                .tr, // 👈 ترجمة اسم اللغة القادمة من الكنترولر
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               color: AppColors.BurntBrown,

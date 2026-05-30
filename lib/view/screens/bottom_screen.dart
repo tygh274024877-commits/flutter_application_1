@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/navigation_controllers.dart';
 import 'package:flutter_application_1/view/screens/assistant_screen.dart';
 import 'package:flutter_application_1/view/screens/main_wapper.dart';
+// استيراد صفحة المفضلة الحقيقية
+import 'package:flutter_application_1/view/screens/favorite_screen.dart';
 import 'package:get/get.dart';
 
 import '../../core/color/constants.dart' hide AppColors;
@@ -30,8 +32,8 @@ class MainScreen extends StatelessWidget {
                 /// AI Assistant Screen
                 const AiAssistantHomeScreen(),
 
-                /// Favorites
-                Center(child: Text("favorites".tr)),
+                /// Favorites - التعديل السحري هون! استبدلنا النص القديم بالصفحة الحقيقية
+                const FavoriteScreen(),
 
                 /// Profile
                 const ProfileScreen(),
@@ -122,7 +124,6 @@ class MainScreen extends StatelessWidget {
               color: isActive ? activeColor : Colors.grey,
             ),
           ),
-
           const SizedBox(height: 2),
           Text(
             label,
